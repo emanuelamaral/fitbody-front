@@ -46,7 +46,10 @@ export default function More(){
 
     function openModal(dayOfWeek){
         setModalVisible(!modalVisible);
-        setDayOfWeek(dayOfWeek)
+        console.log(dayOfWeek)
+    
+            setDayOfWeek(dayOfWeek)
+        
     }
 
     function saveTrainingSheet(){
@@ -60,6 +63,11 @@ export default function More(){
     }
 
     async function openViewSheetTraining(dayOfWeek){
+        
+        if(dayOfWeek == "Sábado"){
+            dayOfWeek = "sabado"
+        }
+
         allTrainingSheetByUserByDayOfWeek = await getAllTrainingSheetByUserProfileAndDayOfWeek(dayOfWeek, selectedActivity.toUpperCase())
         console.log("allTrainingSheetByUserByDayOfWeek", allTrainingSheetByUserByDayOfWeek)
         setAllTrainingSheet(allTrainingSheetByUserByDayOfWeek)
@@ -256,7 +264,6 @@ export default function More(){
                                         mode='time'
                                         locale='pt-BR'
                                         title="Horário dos treinos"
-                                        timeZoneOffsetInMinutes={-180}
                                         is24hourSource="locale"
                                         confirmText="Confirmar"
                                         cancelText="Cancelar"
@@ -712,21 +719,21 @@ const styles = StyleSheet.create({
     txtNameExerciseStyle:{
         fontSize: 20,
         color: '#000',
-        marginStart: 20
+        // marginStart: 
     },
 
     txtTimeStyle:{
         fontSize: 20,
         color: '#000',
-        paddingStart: 180,
-        bottom: 25
+        paddingLeft: 110,
+        // bottom: 25
     },
 
     txtHourOfTrainingStyle:{
         fontSize: 20,
         color: '#000',
-        paddingStart: 280,
-        bottom: 52,
+        paddingStart: 50,
+        // bottom: 52,
     },
 
 
