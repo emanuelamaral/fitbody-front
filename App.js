@@ -37,6 +37,7 @@ import MyPhysicalActivitites from './src/pages/Home/Training/MyPhysicalActivitie
 import MyMeals from './src/pages/Home/Food/MyMeals';
 import AddFood from './src/pages/Home/Food/AddFood';
 import FullMeals from './src/pages/Home/Food/FullMeals';
+import EditMeal from './src/pages/Home/Food/MealManager/EditMeal';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -320,6 +321,16 @@ function App() {
             options={{ 
               headerTransparent: true,
               headerTitle: "Refeições completas", 
+              headerTintColor:"#FFF"
+            }}
+          />
+          
+          <Stack.Screen
+            name="EditMeal"
+            component={EditMeal}
+            options={{ 
+              headerTransparent: true,
+              headerTitle: "Editar Refeições", 
               headerTintColor:"#FFF"
             }}
           />
