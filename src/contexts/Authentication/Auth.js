@@ -127,7 +127,6 @@ function AuthProvider({children}){
         // console.log(goalWaterConsumePerDay);
         setGoalWaterConsume(goalWaterConsumePerDay);
         goalWaterConsumePerDayAux = goalWaterConsumePerDay;
-        criarPerfilUsuario();
     }
 
     const setarAtividadeFisica = async (nameActivity, timeActivity, caloriesActivity) => {
