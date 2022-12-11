@@ -102,7 +102,7 @@ export default function AddFood({navigation}){
                           style={[styles.buttonSaveSheet, styles.buttonOpenSaveSheet]}
                           onPress={() => saveFoodQuantity()}
                       >
-                          <Text style={styles.textStyle}>Salvar medida</Text>
+                          <Text style={styles.textStyle}>Salvar alimento</Text>
                       </TouchableOpacity>
                       <TouchableOpacity
                           style={[styles.buttonBackSheet, styles.buttonBackSheetColor]}
